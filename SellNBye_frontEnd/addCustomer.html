@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add Customer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+      <!-- Form validation styles-->
+      <link href="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css"
+            rel="stylesheet" type="text/css" />
+
+  </head>
+<body>
+
+<div class="container">
+<!--
+Navigation Bar Section 
+-->
+<div class="navbar">
+	  <div class="navbar-inner">
+		<div class="container">
+		  <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </a>
+		  <div class="nav-collapse">
+			<ul class="nav">
+				<li class=""><a href="allCustomers.html">Customer List</a></li>
+			</ul>
+			  <ul class="nav">
+				  <li class=""><a href="addCustomer.html">Add Customer</a></li>
+			  </ul>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+<div class="well well-small">
+	<form id="add_Customer_form" class="form-horizontal">
+		<h3>Customer Details</h3>
+		<div class="control-group">
+			<label class="control-label" for="name">Customer Name<sup>*</sup></label>
+			<div class="controls">
+				<input type="text" id="name" placeholder="Customer Name"
+                       data-validation="length" data-validation-length="min4" data-validation-error-msg="Enter A valid Name" >
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="address">Address<sup>*</sup></label>
+			<div class="controls">
+				<input type="text" id="address" placeholder="Address"
+                       data-validation="length" data-validation-length="min8" data-validation-error-msg="Address not met our Requirement">
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="email">Customer Email<sup>*</sup></label>
+			<div class="controls">
+				<input type="text" id="email" placeholder="Customer Email"
+                       data-validation="email" data-validation-error-msg="Enter a valid email Address">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="phoneNo">Phone Number<sup>*</sup></label>
+			<div class="controls">
+				<input type="text" id="phoneNo" placeholder="Phone Number"
+                       data-validation="number length" data-validation-length="10" data-validation-error-msg="Enter a valid Phone Number">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="country">Country<sup>*</sup></label>
+			<div class="controls">
+				<input type="text" id="country" placeholder="Country"
+                       data-validation="length" data-validation-length="min4" data-validation-error-msg="Enter A valid Country Name">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" id ="addCustomer" name="submitProduct" value="Add Customer" class="btn btn-primary">
+			</div>
+		</div>
+	</form>
+</div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+  	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.easing-1.3.min.js"></script>
+	<script src="assets/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="scripts/add_Customer.js"></script>
+
+	<!-- form validation Jquery Java Script files files -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+	<script>
+        $.validate({
+            lang: 'en',
+            borderColorOnError : '#FF0000',
+            addValidClassOnAll : true
+        });
+	</script>
+
+
+
+</div>
+  </body>
+</html>
